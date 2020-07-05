@@ -1,0 +1,10 @@
+body {
+    background: gray;
+    display: flex;
+}
+
+.bg {
+    width: 400px;
+    height: 400px;
+    background-image: url(../imgs/bg.png);
+}
