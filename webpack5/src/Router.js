@@ -38,6 +38,11 @@ function RouterWrapper({ app, history }) {
     return (
         <ConnectedRouter history={history}>
             <Switch>
+                {/*切换路由时，只是重新render，并未重新构建。要想在切换路由时组件重新构建，
+                重新完成一次生命周期，就需要给render组件加上key加上key就会重新渲染*/}
+                {/* <Route exact key={"/"} path="/" render={(props) => WraperRouter(props, App)} />
+                <Route exact key={"/pageOne"} path="/pageOne" render={(props) => WraperRouter(props, PageOne)} />
+                <Route exact key={"/pageTwo"} path="/pageTwo" render={(props) => WraperRouter(props, PageTwo)} /> */}
                 <Route exact path="/" render={(props) => WraperRouter(props, App)} />
                 <Route exact path="/pageOne" render={(props) => WraperRouter(props, PageOne)} />
                 <Route exact path="/pageTwo" render={(props) => WraperRouter(props, PageTwo)} />
